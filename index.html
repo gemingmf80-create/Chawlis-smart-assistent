@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="hi">
+<!DOCTYPE html><html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,8 +15,17 @@
       </div>
       <button type="submit">लॉगिन करें</button>
     </form>
-    <div class="footer-text">म</div>
+    <div class="footer-text">मालिक का नाम: Masroof</div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    function login(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      if (email) {
+        localStorage.setItem("userEmail", email);
+        window.location.href = "chat.html";
+      }
+    }
+  </script>
 </body>
 </html>
